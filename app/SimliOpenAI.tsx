@@ -411,10 +411,10 @@ const SimliOpenAI: React.FC<SimliOpenAIProps> = ({
   }, []);
 
   React.useEffect(() => {
-    setTimeout(() => {
-      if (!isAvatarVisible)
-        handleStart()
-    }, 500);
+
+    if (!isAvatarVisible)
+      handleStart()
+
     return () => {
       if (isAvatarVisible)
         handleStop()
